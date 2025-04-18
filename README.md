@@ -4,15 +4,22 @@
 - db = sqlite
 
 ## how to run
-- clone git **main** branch to local
-- make sure to install all dependencies (php, laravel, nodejs, nextjs)
 - run
 ```
+git clone git@github.com:rohmanhida/back.git
+cd back
+composer install
+touch database/database.sqlite
 php artisan migrate:refresh --seed
+mv .env.example .env
+php artisan key:generate
 php artisan serve
+cd ..
+git clone git@github.com:rohmanhida/front.git
+cd front
+npm install
 npm run dev
 ```
-
 - akses di browser di halaman http://localhost:3000
 
 ## database design
