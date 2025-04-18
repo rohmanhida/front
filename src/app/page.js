@@ -51,80 +51,80 @@ export default function ShipmentsPage() {
   if (loading) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>Armada List</h1>
-      <table>
-        <thead>
+    <div className="p-8 bg-gray-100 min-h-screen">
+      <h1 className="text-xl font-semibold text-gray-700 mb-4">Armada List</h1>
+      <table className="min-w-full border border-gray-300 bg-white">
+        <thead className="bg-gray-100">
           <tr>
-            <th>Armada ID</th>
-            <th>Type</th>
-            <th>Availability</th>
-            <th>Capacity</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Armada ID</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Type</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Availability</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Capacity</th>
           </tr>
         </thead>
         <tbody>
           {armadas.map((armada) => (
             <tr key={armada.armada_id}>
-              <td>{armada.armada_id}</td>
-              <td>{armada.type}</td>
-              <td>{armada.availability ? "Available" : "Not Available"}</td>
-              <td>{armada.capacity}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{armada.armada_id}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{armada.type}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{armada.availability ? "Available" : "Not Available"}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{armada.capacity}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      <h1>Shipping Orders</h1>
-      <table>
-        <thead>
+      <h1 className="text-xl font-semibold text-gray-700 mb-4">Shipping Orders</h1>
+      <table  className="min-w-full border border-gray-300 bg-white">
+        <thead className="bg-gray-100">
           <tr>
-            <th>Order ID</th>
-            <th>Name</th>
-            <th>Vehicle Type</th>
-            <th>Date</th>
-            <th>Detail</th>
-            <th>Status</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Order ID</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Name</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Vehicle Type</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Date</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Detail</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Status</th>
           </tr>
         </thead>
         <tbody>
           {orders.map((order) => (
             <tr key={order.order_id}>
-              <td>{order.order_id}</td>
-              <td>{order.name}</td>
-              <td>{order.vehicle_type}</td>
-              <td>{order.date}</td>
-              <td>{order.detail}</td>
-              <td>{order.order_status}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{order.order_id}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{order.name}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{order.vehicle_type}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{order.date}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{order.detail}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{order.order_status}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      <h1>Shipments</h1>
-      <table>
-        <thead>
+      <h1 className="text-xl font-semibold text-gray-700 mb-4">Shipments</h1>
+      <table className="min-w-full border border-gray-300 bg-white">
+        <thead className="bg-gray-100">
           <tr>
-            <th>Shipment ID</th>
-            <th>Armada ID</th>
-            <th>Shipping Order ID</th>
-            <th>Date</th>
-            <th>Departure</th>
-            <th>Destination</th>
-            <th>Status</th>
-            <th>Detail</th>
-            <th>Log</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Shipment ID</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Armada ID</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Shipping Order ID</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Date</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Departure</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Destination</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Status</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Detail</th>
+            <th className="text-left px-6 py-3 border-b border-gray-300 text-sm font-medium text-gray-700">Log</th>
           </tr>
         </thead>
         <tbody>
           {shipments.map((s) => (
             <tr key={s.shipment_id}>
-              <td>{s.shipment_id}</td>
-              <td>{s.armada_id}</td>
-              <td>{s.shipping_order_id}</td>
-              <td>{s.date}</td>
-              <td>{s.dep_loc}</td>
-              <td>{s.des_loc}</td>
-              <td>{s.status}</td>
-              <td>{s.detail}</td>
-              <td>{s.shipping_log}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.shipment_id}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.armada_id}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.shipping_order_id}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.date}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.dep_loc}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.des_loc}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.status}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.detail}</td>
+              <td className="px-6 py-4 border-b border-gray-200 text-sm text-gray-500">{s.shipping_log}</td>
             </tr>
           ))}
         </tbody>
