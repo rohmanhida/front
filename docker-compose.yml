@@ -1,0 +1,13 @@
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    # Add volumes if you need persistent storage
+    # volumes:
+    #   - ./data:/app/data
