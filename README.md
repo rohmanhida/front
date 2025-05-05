@@ -1,3 +1,4 @@
+simple web app built with nextjs, and tailwindcss
 ## structure
 - backend = laravel
 - frontend = nextjs
